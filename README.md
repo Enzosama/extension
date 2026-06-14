@@ -1,9 +1,10 @@
-### ĐK SSO
+
+
 ## 1. Đăng ký / Cấu hình SSO cho OpenAI
 
 Để cài đặt SSO, bạn cần đáp ứng các điều kiện tiên quyết sau:
 
-### Điều kiện tiên quyết
+### Điều kiện tiên quyết (Prerequisites)
 
 1. **Có tài khoản OpenAI** với quyền truy cập **Global Admin Console**
    - Đây là phần bắt buộc — bạn phải có plan OpenAI (Team/Enterprise) hỗ trợ Admin Console
@@ -84,10 +85,22 @@ Mở trang **Checkout/Payment** của OpenAI, sau đó mở **Developer Tools** 
 
     // 4. 执行完成，刷新页面
     window.location.reload();
-
+  }
   } catch (err) {
     console.error("失败:", err?.message || err);
   }
 })();
 ```
 
+---
+
+## 3. Các repo liên quan
+
+| Repo | Mô tả |
+|------|-------|
+| [AutoTeam](https://github.com/cnitlrt/AutoTeam) | Tự động đăng ký & xoay vòng tài khoản ChatGPT Team theo quota, đồng bộ sang CPA/Sub2API. |
+| [cpa-plugin-codex-invite](https://github.com/LTbinglingfeng/cpa-plugin-codex-invite) | Plugin CPA gửi email mời referral Codex qua Management API, build bằng Go. |
+| [cloudflare-openai-oidc-sso](https://github.com/catoncat/cloudflare-openai-oidc-sso) | OIDC Provider nhẹ trên Cloudflare Workers cho Custom OIDC SSO của OpenAI Enterprise. |
+| [OC-Codex](https://github.com/angusdevgo/OC-Codex) | GUI trên Windows chuyển đổi giữa Codex OAuth mode và CPAMC/API mode mà không mất lịch sử chat. |
+| [kyl-sub2api-extension](https://github.com/hearthealt/kyl-sub2api-extension) | Chrome Extension tự động hóa flow Kyl Invite → OAuth → Sub2API (batch, Manifest V3). |
+| [GPTSession2CPAandSub2API](https://github.com/gtxx3600/GPTSession2CPAandSub2API) | Công cụ chuyển đổi session ChatGPT Web sang nhiều định dạng auth (CPA, Sub2API, 9router, Codex...), chạy thuần frontend. |
